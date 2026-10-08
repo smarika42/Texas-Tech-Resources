@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raider Resource Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<header class="bar"><div class="wrap">
+  <a class="brand" href="#top"><i></i>Raider Resource Hub</a>
+  <nav aria-label="Jump to">
+    <a href="#directory">Directory</a>
+    <a href="#orgs">Student orgs</a>
+    <a href="#social">Social</a>
+    <a class="sos" href="#help">Need help now</a>
+  </nav>
+</div></header>
+
+<main class="wrap" id="top">
+  <section class="hero">
+    <div class="eyebrow">Every Texas Tech student resource, one search</div>
+    <h1>Find it <em>fast.</em><br>Wreck 'em.</h1>
+    <p class="lede">Type what you need in your own words, like "workout", "I'm stressed", "free food" or "find a job". You get a short explanation and a direct link.</p>
+    <form class="searchbox" role="search" id="searchform" autocomplete="off">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Try: cardio, tutoring, stressed, hungry, internship…" aria-label="Search all Texas Tech resources">
+      <button class="clear" type="button" id="clear" hidden>Clear</button>
+    </form>
+    <div class="try" id="try"><span>Popular:</span></div>
+  </section>
+
+  <section id="directory" style="scroll-margin-top:70px">
+    <div class="status" id="status" aria-live="polite"></div>
+    <div id="spotlight"></div>
+    <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section class="block" id="orgs">
+    <div class="eyebrow">Get involved</div>
+    <h2 class="sec">Student organizations</h2>
+    <p class="sub">Every organization listed on TechConnect, with what it does, how to join, dues, opportunities and where to follow it.</p>
+    <p class="note">Joining, dues and opportunities come from each organization's own description when it mentions them. Always confirm on the organization's page.</p>
+    <div class="org-tools">
+      <form class="searchbox" role="search" id="orgform" autocomplete="off">
+        <input id="orgq" type="search" placeholder="Search organizations: engineering, service, faith, dance…" aria-label="Search student organizations">
+        <button class="clear" type="button" id="orgclear" hidden>Clear</button>
+      </form>
+      <select id="orgcat" aria-label="Filter organizations by category"></select>
+    </div>
+    <div class="status" id="orgstat" aria-live="polite"></div>
+    <div class="grid" id="orggrid"></div>
+  </section>
+
+  <section class="block" id="help">
+    <div class="eyebrow">Right now</div>
+    <h2 class="sec">Need help now?</h2>
+    <p class="sub">If you or someone near you is in immediate danger, call 911. These Texas Tech services are the next stop.</p>
+    <div class="grid" id="helpgrid"></div>
+  </section>
+
+  <section class="block" id="social">
+    <div class="eyebrow">Stay connected</div>
+    <h2 class="sec">Social</h2>
+    <p class="sub">Official accounts and the places to find the rest. Each student organization lists its own Instagram or group chat on its page in Texas Tech's organization directory.</p>
+    <div class="grid" id="socialgrid"></div>
+  </section>
+</main>
+
+<footer><div class="wrap">
+  <p class="credit">Created by Rika</p>
+  <p>Unofficial student guide. Not run by Texas Tech University. Every link goes to the resource's own official page, which has the current hours, costs and sign-up steps.</p>
+  <p>Class times, prices and hours change each semester. Confirm on the linked page before you go.</p>
+</div></footer>
+
+<script src="data.js"></script>
+<script src="orgs-data.js"></script>
+<script src="app.js"></script>
+<script src="orgs.js"></script>
+
+</body>
+</html>
